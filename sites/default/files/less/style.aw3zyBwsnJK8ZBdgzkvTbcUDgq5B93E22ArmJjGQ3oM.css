@@ -1,0 +1,792 @@
+/* with @space:*/
+/* with @space:*/
+/* For image replacement */
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wrapper > header {
+  width: 100%;
+  z-index: 5;
+  position: relative;
+}
+#wrapper > header .region-header {
+  position: relative;
+  height: 120px;
+  width: 100%;
+  max-width: 1170px;
+  min-width: 480px;
+  margin: 0px auto 0px;
+}
+#wrapper #container {
+  position: relative;
+  width: 96%;
+  max-width: 1170px;
+  padding: 0 2%;
+  min-width: 480px;
+  margin: 0px auto 0px;
+  z-index: 4;
+}
+#wrapper > footer {
+  width: 100%;
+  z-index: 3;
+  bottom: 0;
+}
+#wrapper > footer .region-footer {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  max-width: 1170px;
+  min-width: 480px;
+  margin: 0px auto 0px;
+}
+body.sidebar-first #center {
+  margin-left: -220px;
+}
+body.sidebar-first #squeeze {
+  margin-left: 220px;
+  padding-left: 20px;
+}
+body.sidebar-second #center {
+  margin-right: -310px;
+}
+body.sidebar-second #squeeze {
+  margin-right: 310px;
+  padding-right: 20px;
+}
+body.two-sidebars #center {
+  margin: 0 -310px 0 -220px;
+}
+body.two-sidebars #squeeze {
+  margin: 0 310px 0 220px;
+}
+#container #center {
+  float: left;
+  width: 100%;
+}
+#container > aside {
+  float: left;
+  z-index: 2;
+  position: relative;
+}
+#container #sidebar-first {
+  width: 220px;
+  padding-left: 0px;
+}
+#container #sidebar-second {
+  width: 310px;
+  padding-right: 0px;
+}
+html {
+  background: url(/sites/all/themes/base/styles/images/html_bg.jpg) repeat-y;
+  background-size: cover;
+}
+body {
+  font-size: 14px;
+  color: #262626;
+  font-family: 'OpenSans';
+  background: url(/sites/all/themes/base/styles/images/body_bg.png) no-repeat center bottom;
+  background-size: 100% auto;
+}
+/*---------------основные элементы------------------------------*/
+h1 {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  font-size: 30px;
+  text-align: left;
+  margin: 70px 0 30px 0;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: 'Barkentina';
+  color: #652403;
+  font-size: 20px;
+  text-align: left;
+  margin: 10px 0 10px 0;
+}
+a {
+  color: #6f2403;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+#block-system-main .node ul {
+  padding: 0;
+  margin: 10px 0;
+}
+#block-system-main .node ul li {
+  color: #333;
+  margin: 10px 0 5px 20px;
+}
+.node {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #777;
+  padding: 1% 2%;
+}
+.enroll {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 13px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+}
+.enroll:hover {
+  background: #6f2403;
+  color: #fff;
+}
+/*------------------------шапка---------------------------------*/
+header {
+  background: url(/sites/all/themes/base/styles/images/header_bg.png) bottom repeat-x;
+  background-size: auto 100%;
+}
+/*------------------------блок логотипа-------------------------*/
+#block-block-1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -130px;
+  width: 260px;
+  top: -91px;
+  z-index: 5;
+}
+#block-block-1 .content img {
+  width: 100%;
+}
+/*----------------------правое и левое меню-----------------------*/
+#block-menu-menu-left,
+#block-menu-menu-fight {
+  margin-top: 42px;
+  width: 38%;
+}
+#block-menu-menu-left .content ul,
+#block-menu-menu-fight .content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+#block-menu-menu-left .content ul li,
+#block-menu-menu-fight .content ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#block-menu-menu-left .content a,
+#block-menu-menu-fight .content a {
+  font-family: 'Barkentina';
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+#block-menu-menu-left .content a:hover,
+#block-menu-menu-fight .content a:hover,
+#block-menu-menu-left .content .active,
+#block-menu-menu-fight .content .active {
+  text-decoration: underline;
+}
+#block-menu-menu-left {
+  float: left;
+}
+#block-menu-menu-fight {
+  float: right;
+}
+/*главное меню на мобильных*/
+#block-system-main-menu {
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  z-index: 10;
+  top: 18px;
+}
+#block-system-main-menu .title {
+  position: absolute;
+  text-transform: uppercase;
+  display: none;
+  font-size: 18px;
+  background: #fff;
+  width: 150px;
+  border: 1px solid #a05d18;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #6f2403;
+  text-decoration: none;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+}
+#block-system-main-menu .title:hover {
+  color: #fff;
+  background: #b65830;
+}
+#block-system-main-menu .content {
+  display: none;
+  margin-top: 50px;
+}
+#block-system-main-menu .content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #ccc;
+}
+#block-system-main-menu .content ul li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+}
+#block-system-main-menu .content ul .last {
+  border-bottom: none;
+}
+#block-system-main-menu .content ul .last a {
+  border-radius: 0 0 5px 5px;
+}
+#block-system-main-menu .content ul .first a {
+  border-radius: 5px 5px 0 0;
+}
+#block-system-main-menu .content a {
+  font-family: 'Barkentina';
+  font-size: 20px;
+  font-weight: 600;
+  color: #6f2403;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+}
+#block-system-main-menu .content a:hover {
+  color: #fff;
+  background: #b65830;
+}
+/*--------------------------слайдер----------------------------------------*/
+.slider {
+  position: relative;
+  z-index: 3;
+}
+.region-slider {
+  width: 96%;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 2%;
+  min-width: 480px;
+  position: relative;
+  top: -10px;
+  z-index: 3;
+}
+.region-slider img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.view-content.slick-slider {
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.8);
+}
+.slick-arrow {
+  position: absolute;
+  width: 19px;
+  height: 138px;
+  top: 30%;
+  z-index: 10;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 0;
+}
+.slick-prev {
+  background: url(/sites/all/themes/base/styles/images/slider_prev.png) left no-repeat;
+  left: 30px;
+}
+.slick-prev:hover {
+  background: url(/sites/all/themes/base/styles/images/slider_prev.png) right no-repeat;
+}
+.slick-next {
+  background: url(/sites/all/themes/base/styles/images/slider_next.png) right no-repeat;
+  right: 30px;
+}
+.slick-next:hover {
+  background: url(/sites/all/themes/base/styles/images/slider_next.png) left no-repeat;
+}
+/*---------------------------правая колонка--------------------------------*/
+/*-------------------блок ближайших занятий-------------------------------*/
+#block-views-calendar-block-2 {
+  background: #d68e43;
+  color: #fff;
+  border: 4px solid #a05d18;
+  border-radius: 10px;
+  padding: 15px;
+}
+#block-views-calendar-block-2 .content ul {
+  padding: 0;
+  list-style: none;
+}
+#block-views-calendar-block-2 .content ul li {
+  margin: 5px 0;
+  border-bottom: 1px solid #652403;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+#block-views-calendar-block-2 .content ul li a {
+  font-size: 14px;
+  color: #612403;
+}
+#block-views-calendar-block-2 .content ul .views-field-title {
+  margin-bottom: 8px;
+}
+#block-views-calendar-block-2 .content ul .views-field-title a {
+  font-size: 15px;
+  color: #612403;
+}
+#block-views-calendar-block-2 .content ul .views-field-field-cource-teacher {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+#block-views-calendar-block-2 .content ul .views-field-field-cource-teacher a {
+  font-size: 13px;
+}
+#block-views-calendar-block-2 .content ul .views-field-field-beginning-date {
+  padding-top: 5px;
+  font-size: 16px;
+  float: left;
+}
+#block-views-calendar-block-2 .content ul .views-field-nothing {
+  float: right;
+}
+#block-views-calendar-block-2 .content .views-label,
+#block-views-calendar-block-2 .content .field-content {
+  display: inline;
+}
+/*содержимое страниц*/
+/*--------------------------------представление курсов*/
+.view-cources .views-row {
+  background: #b65830;
+  color: #fff;
+  border: 4px solid #963d18;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.view-cources .views-row .views-field-title {
+  margin: 0 0 0px 0;
+}
+.view-cources .views-row .views-field-title a {
+  font-size: 28px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.view-cources .views-row .views-field-title a:hover {
+  text-decoration: none;
+}
+.view-cources .views-row .views-field-field-beginning-date {
+  font-size: 22px;
+}
+.view-cources .views-row .views-field-field-course-deck {
+  padding: 0 0 10px 0;
+}
+.view-cources .views-row .views-field-view-node {
+  float: left;
+}
+.view-cources .views-row .views-field-view-node a {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 13px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+.view-cources .views-row .views-field-view-node a:hover {
+  background: #6f2403;
+  color: #fff;
+}
+.view-cources .views-row .views-field-nothing {
+  float: right;
+}
+/*-----------------календарь----------------------------------------*/
+.view-calendar .date-prev,
+.view-calendar .date-next {
+  background: none !important;
+}
+.view-calendar .date-prev a,
+.view-calendar .date-next a {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 15px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+}
+.view-calendar .date-prev a:hover,
+.view-calendar .date-next a:hover {
+  background: #6f2403;
+  color: #fff;
+}
+.view-calendar .date-prev {
+  margin-right: 50px;
+}
+/*------------------------страница курса-мастер-класса-----------------*/
+.node-type-master-class .field-name-field-cource-photo .field-items,
+.node-type-course .field-name-field-cource-photo .field-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.node-type-master-class .field-name-field-cource-photo .field-items img,
+.node-type-course .field-name-field-cource-photo .field-items img {
+  border: 2px solid #6f2403;
+}
+.node-type-master-class .content,
+.node-type-course .content {
+  position: relative;
+}
+/*-------------------------страница мастеров-------------------------*/
+.view-teachers .views-row {
+  background: #a9a846;
+  color: #fff;
+  border: 4px solid #7f7e32;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.view-teachers .views-row .views-field-field-teacher-photo {
+  float: left;
+  margin-right: 20px;
+}
+.view-teachers .views-row .views-field-field-teacher-photo img {
+  border: 2px solid #7f7e32;
+}
+.view-teachers .views-row .views-field-title a {
+  font-family: 'Barkentina';
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #5e5d18;
+}
+.view-teachers .views-row .views-field-field-teacher-link {
+  margin-top: 15px;
+}
+.view-teachers .views-row .views-field-field-teacher-link a {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 15px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+.view-teachers .views-row .views-field-field-teacher-link a:hover {
+  background: #6f2403;
+  color: #fff;
+}
+.field-name-field-teacher-photo {
+  float: left;
+  margin-right: 20px;
+}
+/*---------------------галерея--------------------------------------*/
+.view-galery .view-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.view-galery .view-content h3 {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/*--------------------энциклопедия--------------------------------*/
+.view-encyclopedia .views-row {
+  background: #9d7752;
+  color: #fff;
+  border: 4px solid #765636;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.view-encyclopedia .views-row .views-field-title {
+  font-family: 'Barkentina';
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.view-encyclopedia .views-row .views-field-title a {
+  color: #583b1e;
+}
+.view-encyclopedia .views-row .views-field-view-node {
+  margin-top: 10px;
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 15px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+.view-encyclopedia .views-row .views-field-view-node:hover {
+  background: #6f2403;
+}
+.view-encyclopedia .views-row .views-field-view-node:hover a {
+  color: #fff;
+}
+/*-------------------------контакты перед шапкой-------------------*/
+.region-highlighted {
+  position: relative;
+  width: 96%;
+  max-width: 1170px;
+  padding: 0 2%;
+  min-width: 480px;
+  margin: 2% auto 0px;
+  z-index: 2;
+}
+#block-block-2 .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #613415;
+  font-size: 22px;
+}
+#block-block-2 .tel {
+  font-size: 28px;
+  padding-left: 60px;
+  line-height: 50px;
+  background: url(/sites/all/themes/base/styles/images/tel_ico.png) left center no-repeat;
+}
+#block-block-2 .vk {
+  line-height: 60px;
+  padding-left: 70px;
+  background: url(/sites/all/themes/base/styles/images/vk_ico.png) left center no-repeat;
+}
+#block-block-2 .address {
+  line-height: 56px;
+  padding-left: 50px;
+  background: url(/sites/all/themes/base/styles/images/map_ico.png) left center no-repeat;
+}
+#block-block-2 .calback {
+  width: 100%;
+  text-align: center;
+}
+#block-block-2 .calback a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#block-block-2 .calback a:hover {
+  text-decoration: none;
+}
+/*--------------страница контактов---------------------------*/
+.page-node-36 .node {
+  color: #613415;
+  font-size: 22px;
+}
+.page-node-36 .node div {
+  margin: 10px 0;
+}
+.page-node-36 .tel {
+  font-size: 28px;
+  padding-left: 60px;
+  line-height: 50px;
+  background: url(/sites/all/themes/base/styles/images/tel_ico.png) left center no-repeat;
+}
+.page-node-36 .vk {
+  line-height: 60px;
+  padding-left: 70px;
+  background: url(/sites/all/themes/base/styles/images/vk_ico.png) left center no-repeat;
+}
+.page-node-36 .address {
+  line-height: 56px;
+  padding-left: 50px;
+  background: url(/sites/all/themes/base/styles/images/map_ico.png) left center no-repeat;
+}
+.page-node-36 .calback {
+  width: 100%;
+  text-align: center;
+}
+.page-node-36 .calback a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.page-node-36 .calback a:hover {
+  text-decoration: none;
+}
+/*------------------------форма записи на курс---------------------*/
+#block-webform-client-block-38,
+#block-webform-client-block-39 {
+  width: 100%;
+  max-width: 445px;
+  display: none;
+  background: #ce9962;
+  border: 4px solid #7f5325;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+#block-webform-client-block-38 .title,
+#block-webform-client-block-39 .title {
+  color: #7f5325;
+  text-transform: uppercase;
+}
+#block-webform-client-block-38 .form-actions input,
+#block-webform-client-block-39 .form-actions input {
+  margin-top: 10px;
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 15px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+#block-webform-client-block-38 .form-actions input:hover,
+#block-webform-client-block-39 .form-actions input:hover {
+  background: #6f2403;
+  color: #fff;
+}
+#block-webform-client-block-38 .grippie,
+#block-webform-client-block-39 .grippie {
+  display: none;
+}
+/*--------------------кнопка записи на странице ---------------------------*/
+#block-block-3 {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+#block-block-3 .enroll {
+  font-size: 20px;
+  padding: 5px 15px;
+}
+/*------------------подвал------------------------------------------------*/
+footer {
+  padding-top: 17%;
+}
+/* Большой дисплей */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 28px;
+    margin: 60px 0 30px 0;
+  }
+  .region-header {
+    height: 100px !important;
+  }
+  #block-block-1 {
+    margin-left: -110px;
+    width: 220px;
+    top: -74px;
+  }
+  #block-menu-menu-left,
+  #block-menu-menu-fight {
+    margin-top: 30px;
+    width: 39%;
+  }
+  #block-menu-menu-left .content a,
+  #block-menu-menu-fight .content a {
+    font-size: 16px;
+  }
+}
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (max-width: 979px) {
+  h1 {
+    font-size: 28px;
+    margin: 50px 0 30px 0;
+  }
+  .region-header {
+    height: 160px !important;
+  }
+  #block-block-1 {
+    margin-left: -140px;
+    width: 280px;
+    top: -93px;
+  }
+  #block-menu-menu-left,
+  #block-menu-menu-fight {
+    margin-top: 0px;
+    width: 40%;
+  }
+  #block-menu-menu-left .content ul,
+  #block-menu-menu-fight .content ul {
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #block-menu-menu-left .content ul li,
+  #block-menu-menu-fight .content ul li {
+    text-align: center;
+  }
+  #block-menu-menu-left .content a,
+  #block-menu-menu-fight .content a {
+    font-size: 20px;
+  }
+  body.sidebar-second #squeeze {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  #sidebar-second {
+    float: none;
+    clear: both;
+    width: 100% !important;
+  }
+}
+/* От ландшафтного экрана телефона до потретного планшета */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 26px;
+    margin: 50px 0 30px 0;
+  }
+  .region-header {
+    height: 100px !important;
+  }
+  #block-block-1 {
+    margin-left: 0px;
+    width: 220px;
+    top: -74px;
+  }
+  #block-menu-menu-left,
+  #block-menu-menu-fight {
+    display: none;
+  }
+  #block-system-main-menu .title {
+    display: block;
+  }
+  .slider {
+    display: none;
+  }
+}
+/* Landscape - телефоны */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    margin: 40px 0 30px 0;
+  }
+  #block-system-main-menu .title {
+    display: block;
+  }
+}

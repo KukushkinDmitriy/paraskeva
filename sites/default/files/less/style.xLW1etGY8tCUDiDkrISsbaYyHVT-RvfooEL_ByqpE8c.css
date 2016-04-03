@@ -1,0 +1,139 @@
+/* with @space:*/
+/* with @space:*/
+/* For image replacement */
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wrapper > header {
+  width: 100%;
+  z-index: 5;
+}
+#wrapper > header .region-header {
+  height: 170px;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0px auto 0px;
+}
+#wrapper #container {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0px auto 0px;
+  z-index: 4;
+}
+#wrapper > footer {
+  width: 100%;
+  z-index: 3;
+  bottom: 0;
+}
+#wrapper > footer .region-footer {
+  height: 50px;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0px auto 0px;
+}
+body.sidebar-first #center {
+  margin-left: -220px;
+}
+body.sidebar-first #squeeze {
+  margin-left: 220px;
+  padding-left: 20px;
+}
+body.sidebar-second #center {
+  margin-right: -310px;
+}
+body.sidebar-second #squeeze {
+  margin-right: 310px;
+}
+body.two-sidebars #center {
+  margin: 0 -310px 0 -220px;
+}
+body.two-sidebars #squeeze {
+  margin: 0 310px 0 220px;
+}
+#container #center {
+  float: left;
+  width: 100%;
+}
+#container > aside {
+  float: left;
+  z-index: 2;
+  position: relative;
+}
+#container #sidebar-first {
+  width: 220px;
+  padding-left: 0px;
+}
+#container #sidebar-second {
+  width: 310px;
+  padding-right: 0px;
+}
+/* Большой дисплей */
+@media (min-width: 980px) and (max-width: 1280px) {
+  body {
+    background: red;
+  }
+}
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (min-width: 768px) and (max-width: 979px) {
+  body {
+    background: green;
+  }
+}
+/* От ландшафтного экрана телефона до потретного планшета */
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    background: yellow;
+  }
+}
+/* Landscape - телефоны */
+@media (max-width: 480px) {
+  body {
+    background: blue;
+  }
+}
+html {
+  background: url(/sites/all/themes/base/styles/images/html_bg.jpg) repeat-y;
+  background-size: cover;
+}
+body {
+  color: #262626;
+  font-family: 'OpenSans';
+  background: url(/sites/all/themes/base/styles/images/body_bg.png) no-repeat center bottom;
+  background-size: 100% auto;
+}
+/*------------------------блок логотипа-------------------------*/
+#block-block-1 {
+  position: absolute;
+  top: -5%;
+  width: 20%;
+  left: 50%;
+  margin-left: -10%;
+}
+#block-block-1 .content img {
+  display: block;
+  width: 100%;
+}
+#block-system-main-menu .content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#block-system-main-menu .content ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#block-system-main-menu .content ul li a {
+  font-family: 'Barkentina';
+  font-size: 14px;
+  color: #6f2f00;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#block-system-main-menu .content ul li a:hover,
+#block-system-main-menu .content ul li .active {
+  text-decoration: underline;
+}

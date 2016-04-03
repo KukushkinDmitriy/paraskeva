@@ -1,0 +1,109 @@
+/* Большой дисплей */
+@media (max-width: 1200px) {
+  h1{
+    font-size: 28px;
+    margin: 60px 0 30px 0;
+  }
+  .region-header{
+    height: 100px !important;
+  }
+  #block-block-1{
+    margin-left: -110px;
+    width: 220px;
+    top:-74px;
+  }
+  #block-menu-menu-left,#block-menu-menu-fight{
+    margin-top: 30px;
+    width: 39%;
+    .content{
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (max-width: 979px) {
+  h1{
+    font-size: 28px;
+    margin: 50px 0 30px 0;
+  }
+  .region-header{
+    height: 160px !important;
+  }
+  #block-block-1{
+    margin-left: -140px;
+    width: 280px;
+    top:-93px;
+  }
+  #block-menu-menu-left,#block-menu-menu-fight{
+    margin-top: 0px;
+    width: 40%;
+    .content{
+      ul{
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        li{
+          text-align: center;
+        }
+      }
+      a{
+        font-size: 20px;
+      }
+    }
+  }
+  body.sidebar-second #squeeze{
+    margin-right: 0;
+    padding-right: 0;
+  }
+  #sidebar-second{
+    float: none;
+    clear: both;
+    width: 100% !important;
+  }
+}
+/* От ландшафтного экрана телефона до потретного планшета */
+@media (max-width: 767px) {
+  h1{
+    font-size: 26px;
+    margin: 50px 0 30px 0;
+  }
+  .region-header{
+    height: 100px !important;
+  }
+  #block-block-1{
+    margin-left: 0px;
+    width: 220px;
+    top:-74px;
+  }
+  #block-menu-menu-left,#block-menu-menu-fight{
+    display: none;
+  }
+  #block-system-main-menu {
+    .title {
+      display: block;
+    }
+  }
+  .slider{
+   display: none;
+  }
+}
+/* Landscape - телефоны */
+@media (max-width: 480px) {
+  h1{
+    font-size: 24px;
+    margin: 40px 0 30px 0;
+  }
+  #block-system-main-menu {
+    .title {
+      display: block;
+    }
+  }
+}
+
+
+
+
+
