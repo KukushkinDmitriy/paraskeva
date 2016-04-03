@@ -1,0 +1,645 @@
+@import "variables.less";
+@import "mixin.less";
+@import "layouts.less";
+
+html{
+  background: url("images/html_bg.jpg") repeat-y;
+  background-size: cover;
+}
+
+body {
+  font-size: 14px;
+  color: #262626;
+  font-family: 'OpenSans';
+  background: url("images/body_bg.png") no-repeat center bottom;
+  background-size: 100% auto;
+}
+/*---------------основные элементы------------------------------*/
+h1{
+  font-family: 'Barkentina';
+  color: #6f2403;
+  font-size: 30px;
+  text-align: left;
+  margin: 70px 0 30px 0;
+  text-transform: uppercase;
+}
+h2{
+  font-family: 'Barkentina';
+  color: #652403;
+  font-size: 20px;
+  text-align: left;
+  margin: 10px 0 10px 0;
+}
+a{
+  color: #6f2403;
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+#block-system-main .node ul{
+  padding: 0;
+  margin: 10px 0;
+  li{
+    color: #333;
+    margin:10px 0 5px 20px;
+  }
+}
+.node{
+  background: rgba(255,255,255,0.6);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #777;
+  padding:1% 2%;
+}
+.enroll{
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 13px;
+  border:1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+  &:hover{
+    background: #6f2403;
+    color: #fff;
+  }
+}
+/*------------------------шапка---------------------------------*/
+header{
+  background: url("images/header_bg.png") bottom repeat-x;
+  background-size: auto 100%;
+}
+/*------------------------блок логотипа-------------------------*/
+#block-block-1{
+  position: absolute;
+  left: 50%;
+  margin-left: -130px;
+  width: 260px;
+  top:-91px;
+  z-index: 5;
+  .content{
+    img{
+      width: 100%;
+    }
+  }
+}
+/*----------------------правое и левое меню-----------------------*/
+#block-menu-menu-left,#block-menu-menu-fight{
+  margin-top: 42px;
+  width: 38%;
+  .content{
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+    a{
+      font-family: 'Barkentina';
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover,.active{
+      text-decoration: underline;
+    }
+  }
+}
+#block-menu-menu-left{
+float: left;
+}
+#block-menu-menu-fight{
+float: right;
+}
+/*главное меню на мобильных*/
+#block-system-main-menu{
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  z-index: 10;
+  top:18px;
+  .title{
+    position: absolute;
+    text-transform: uppercase;
+    display: none;
+    font-size: 18px;
+    background: #fff;
+    width: 150px;
+    border:1px solid #a05d18;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #6f2403;
+    text-decoration: none;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      color: #fff;
+      background: #b65830;
+
+    }
+
+  }
+  .content{
+    display: none;
+    margin-top: 50px;
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px #ccc;
+      li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-bottom: 1px solid #eee;
+      }
+      .last{
+        border-bottom: none;
+        a{
+          border-radius: 0 0 5px 5px;
+        }
+      }
+      .first{
+        a{
+          border-radius: 5px 5px 0 0;
+        }
+      }
+    }
+    a{
+      font-family: 'Barkentina';
+      font-size: 20px;
+      font-weight: 600;
+      color: #6f2403;
+      text-decoration: none;
+      display: block;
+      padding: 5px 0;
+      text-align: center;
+
+    }
+    a:hover{
+      color: #fff;
+      background: #b65830;
+
+    }
+  }
+}
+/*--------------------------слайдер----------------------------------------*/
+.slider{
+  position: relative;
+  z-index: 3;
+}
+.region-slider{
+  width: 96%;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 2%;
+  min-width: 480px;
+  position: relative;
+  top:-10px;
+  z-index: 3;
+  img{
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+.view-content.slick-slider{
+  box-shadow: 1px 5px 20px rgba(0,0,0,0.8);
+}
+ .slick-arrow{
+  position: absolute;
+   width: 19px;
+   height: 138px;
+   top:30%;
+
+   z-index: 10;
+   border: 0;
+   box-shadow: none;
+   outline: none;
+   font-size: 0;
+}
+.slick-prev{
+  background: url("images/slider_prev.png") left no-repeat;
+  left: 30px;
+  &:hover{
+    background: url("images/slider_prev.png") right no-repeat;
+  }
+}
+.slick-next{
+  background: url("images/slider_next.png") right no-repeat;
+  right: 30px;
+  &:hover{
+    background: url("images/slider_next.png") left no-repeat;
+  }
+}
+/*---------------------------правая колонка--------------------------------*/
+#sidebar-second{
+  //padding-top: 135px;
+}
+/*-------------------блок ближайших занятий-------------------------------*/
+#block-views-calendar-block-2{
+  background: #d68e43;
+  color: #fff;
+  border:4px solid #a05d18;
+  border-radius: 10px;
+  padding: 15px;
+  .content{
+    ul{
+      padding: 0;
+      list-style: none;
+      li{
+        margin: 5px 0;
+        border-bottom: 1px solid #652403;
+        padding-bottom: 10px;
+        overflow: hidden;
+        a{
+          font-size: 14px;
+          color: #612403;
+        }
+      }
+      .views-field-title{
+        margin-bottom: 8px;
+        a{
+          font-size: 15px;
+          color: #612403;
+        }
+      }
+      .views-field-field-cource-teacher{
+        font-size: 13px;
+        margin-bottom: 8px;
+        a{
+          font-size: 13px;
+        }
+      }
+      .views-field-field-beginning-date{
+        padding-top: 5px;
+        font-size: 16px;
+        float: left;
+      }
+      .views-field-nothing{
+        float:right;
+      }
+    }
+    .views-label,.field-content{
+      display: inline;
+    }
+  }
+}
+/*содержимое страниц*/
+.node-type-page .node{
+
+}
+/*--------------------------------представление курсов*/
+.view-cources{
+  .views-row{
+    background: #b65830;
+    color: #fff;
+    border:4px solid #963d18;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    .views-field-title{
+      margin: 0 0 0px 0;
+      a{
+        font-size: 28px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .views-field-field-beginning-date{
+      font-size: 22px;
+    }
+    .views-field-field-course-deck{
+      padding: 0 0 10px 0;
+    }
+    .views-field-view-node{
+      float: left;
+      a{
+        font-family: 'Barkentina';
+        color: #6f2403;
+        background: #fff;
+        font-size: 13px;
+        border:1px solid #6f2403;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        padding: 3px 5px;
+        text-decoration: none;
+        &:hover{
+          background: #6f2403;
+          color: #fff;
+        }
+      }
+    }
+    .views-field-nothing{
+      float: right;
+    }
+  }
+}
+/*-----------------календарь----------------------------------------*/
+.view-calendar{
+  .date-prev,.date-next{
+    background: none !important;
+    a{
+      font-family: 'Barkentina';
+      color: #6f2403;
+      background: #fff;
+      font-size: 15px;
+      border:1px solid #6f2403;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      padding: 3px 5px;
+      &:hover{
+        background: #6f2403;
+        color: #fff;
+      }
+    }
+
+  }
+  .date-prev{
+    margin-right: 50px;
+  }
+}
+/*------------------------страница курса-мастер-класса-----------------*/
+.node-type-master-class,.node-type-course{
+  .field-name-field-cource-photo .field-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img{
+      border:2px solid #6f2403;
+    }
+  }
+  .content{
+    position: relative;
+  }
+}
+/*-------------------------страница мастеров-------------------------*/
+.view-teachers{
+  .views-row{
+    background: #a9a846;
+    color: #fff;
+    border:4px solid #7f7e32;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    .views-field-field-teacher-photo{
+      float: left;
+      margin-right: 20px;
+      img{
+        border:2px solid #7f7e32;
+      }
+
+    }
+    .views-field-title{
+      a{
+        font-family: 'Barkentina';
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #5e5d18;
+      }
+    }
+    .views-field-field-teacher-link{
+      margin-top: 15px;
+      a{
+        font-family: 'Barkentina';
+        color: #6f2403;
+        background: #fff;
+        font-size: 15px;
+        border:1px solid #6f2403;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        padding: 3px 5px;
+        text-decoration: none;
+        &:hover{
+          background: #6f2403;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.field-name-field-teacher-photo{
+  float: left;
+  margin-right: 20px;
+}
+/*---------------------галерея--------------------------------------*/
+.view-galery{
+  .view-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h3{
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+/*--------------------энциклопедия--------------------------------*/
+.view-encyclopedia{
+  .views-row {
+    background: #9d7752;
+    color: #fff;
+    border: 4px solid #765636;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    .views-field-title{
+      font-family: 'Barkentina';
+      font-size: 28px;
+      margin-bottom: 5px;
+      a{
+        color: #583b1e;
+      }
+
+    }
+    .views-field-view-node{
+      margin-top: 10px;
+      font-family: 'Barkentina';
+      color: #6f2403;
+      background: #fff;
+      font-size: 15px;
+      border:1px solid #6f2403;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      padding: 3px 5px;
+      text-decoration: none;
+      &:hover{
+        background: #6f2403;
+        a{
+          color: #fff;
+        }
+
+      }
+    }
+  }
+}
+/*-------------------------контакты перед шапкой-------------------*/
+.region-highlighted{
+  position: relative;
+  width: 96%;
+  max-width: @mainWidth;
+  padding: 0 2%;
+  min-width: 480px;
+  margin: 2% auto 0px;
+  z-index: 2;
+}
+#block-block-2{
+
+  .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color:#613415;
+    font-size: 22px;
+  }
+  .tel{
+    font-size: 28px;
+    padding-left: 60px;
+    line-height: 50px;
+    background: url("images/tel_ico.png") left center no-repeat;
+
+  }
+  .vk{
+    line-height: 60px;
+    padding-left: 70px;
+    background: url("images/vk_ico.png") left center no-repeat;
+  }
+  .address{
+    line-height: 56px;
+    padding-left: 50px;
+    background: url("images/map_ico.png") left center no-repeat;
+  }
+  .calback{
+    width: 100%;
+    text-align: center;
+    a{
+      cursor: pointer;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+/*--------------страница контактов---------------------------*/
+.page-node-36 {
+  .node {
+    color: #613415;
+    font-size: 22px;
+    div{
+      margin:10px 0;
+    }
+  }
+  .tel{
+    font-size: 28px;
+    padding-left: 60px;
+    line-height: 50px;
+    background: url("images/tel_ico.png") left center no-repeat;
+
+  }
+  .vk{
+    line-height: 60px;
+    padding-left: 70px;
+    background: url("images/vk_ico.png") left center no-repeat;
+  }
+  .address{
+    line-height: 56px;
+    padding-left: 50px;
+    background: url("images/map_ico.png") left center no-repeat;
+  }
+  .calback{
+    width: 100%;
+    text-align: center;
+    a{
+      cursor: pointer;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+/*------------------------форма записи на курс---------------------*/
+#block-webform-client-block-38,#block-webform-client-block-39{
+  width: 100%;
+  max-width: 445px;
+  display: none;
+  background: #ce9962;
+  border:4px solid #7f5325;
+  border-radius: 10px;
+  .title{
+    color:#7f5325;
+    text-transform: uppercase;
+  }
+  padding:10px 15px;
+  .form-actions input{
+    margin-top: 10px;
+    font-family: 'Barkentina';
+    color: #6f2403;
+    background: #fff;
+    font-size: 15px;
+    border:1px solid #6f2403;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 5px;
+    text-decoration: none;
+    &:hover{
+      background: #6f2403;
+
+        color: #fff;
+
+
+    }
+  }
+  .grippie{
+    display: none;
+  }
+}
+/*--------------------кнопка записи на странице ---------------------------*/
+#block-block-3{
+  position: absolute;
+  right: 2%;
+  top:2%;
+  .enroll{
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+}
+/*------------------подвал------------------------------------------------*/
+
+footer{
+  padding-top:17%;
+}
+@import "break_points.less";

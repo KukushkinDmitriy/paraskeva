@@ -1,0 +1,389 @@
+/* with @space:*/
+/* with @space:*/
+/* For image replacement */
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wrapper > header {
+  width: 100%;
+  z-index: 5;
+  position: relative;
+}
+#wrapper > header .region-header {
+  position: relative;
+  height: 120px;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 480px;
+  margin: 0px auto 0px;
+}
+#wrapper #container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 480px;
+  margin: 0px auto 0px;
+  z-index: 4;
+}
+#wrapper > footer {
+  width: 100%;
+  z-index: 3;
+  bottom: 0;
+}
+#wrapper > footer .region-footer {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 480px;
+  margin: 0px auto 0px;
+}
+body.sidebar-first #center {
+  margin-left: -220px;
+}
+body.sidebar-first #squeeze {
+  margin-left: 220px;
+  padding-left: 20px;
+}
+body.sidebar-second #center {
+  margin-right: -310px;
+}
+body.sidebar-second #squeeze {
+  margin-right: 310px;
+}
+body.two-sidebars #center {
+  margin: 0 -310px 0 -220px;
+}
+body.two-sidebars #squeeze {
+  margin: 0 310px 0 220px;
+}
+#container #center {
+  float: left;
+  width: 100%;
+}
+#container > aside {
+  float: left;
+  z-index: 2;
+  position: relative;
+}
+#container #sidebar-first {
+  width: 220px;
+  padding-left: 0px;
+}
+#container #sidebar-second {
+  width: 310px;
+  padding-right: 0px;
+}
+html {
+  background: url(/sites/all/themes/base/styles/images/html_bg.jpg) repeat-y;
+  background-size: cover;
+}
+body {
+  color: #262626;
+  font-family: 'OpenSans';
+  background: url(/sites/all/themes/base/styles/images/body_bg.png) no-repeat center bottom;
+  background-size: 100% auto;
+}
+/*---------------основные элементы------------------------------*/
+h1 {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  font-size: 30px;
+  text-align: left;
+  margin: 70px 0 30px 0;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  font-size: 20px;
+  text-align: left;
+  margin: 10px 0 10px 0;
+}
+a {
+  color: #6f2403;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+.enroll {
+  font-family: 'Barkentina';
+  color: #6f2403;
+  background: #fff;
+  font-size: 13px;
+  border: 1px solid #6f2403;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 5px;
+}
+.enroll:hover {
+  background: #6f2403;
+  color: #fff;
+}
+/*------------------------шапка---------------------------------*/
+header {
+  background: url(/sites/all/themes/base/styles/images/header_bg.png) bottom repeat-x;
+  background-size: auto 100%;
+}
+/*------------------------блок логотипа-------------------------*/
+#block-block-1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -130px;
+  width: 260px;
+  top: -91px;
+  z-index: 5;
+}
+#block-block-1 .content img {
+  width: 100%;
+}
+/*----------------------правое и левое меню-----------------------*/
+#block-menu-menu-left,
+#block-menu-menu-fight {
+  margin-top: 42px;
+  width: 38%;
+}
+#block-menu-menu-left .content ul,
+#block-menu-menu-fight .content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+#block-menu-menu-left .content ul li,
+#block-menu-menu-fight .content ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#block-menu-menu-left .content a,
+#block-menu-menu-fight .content a {
+  font-family: 'Barkentina';
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+#block-menu-menu-left .content a:hover,
+#block-menu-menu-fight .content a:hover,
+#block-menu-menu-left .content .active,
+#block-menu-menu-fight .content .active {
+  text-decoration: underline;
+}
+#block-menu-menu-left {
+  float: left;
+}
+#block-menu-menu-fight {
+  float: right;
+}
+/*главное меню на мобильных*/
+#block-system-main-menu {
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  z-index: 10;
+  top: 18px;
+}
+#block-system-main-menu .title {
+  position: absolute;
+  text-transform: uppercase;
+  display: none;
+  font-size: 18px;
+  background: #fff;
+  width: 150px;
+  border: 1px solid #a05d18;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #6f2403;
+  text-decoration: none;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+}
+#block-system-main-menu .title:hover {
+  color: #fff;
+  background: #b65830;
+}
+#block-system-main-menu .content {
+  display: none;
+  margin-top: 50px;
+}
+#block-system-main-menu .content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #ccc;
+}
+#block-system-main-menu .content ul li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+}
+#block-system-main-menu .content ul .last {
+  border-bottom: none;
+}
+#block-system-main-menu .content ul .last a {
+  border-radius: 0 0 5px 5px;
+}
+#block-system-main-menu .content ul .first a {
+  border-radius: 5px 5px 0 0;
+}
+#block-system-main-menu .content a {
+  font-family: 'Barkentina';
+  font-size: 20px;
+  font-weight: 600;
+  color: #6f2403;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+}
+#block-system-main-menu .content a:hover {
+  color: #fff;
+  background: #b65830;
+}
+/*--------------------------слайдер----------------------------------------*/
+.slider {
+  position: relative;
+  z-index: 3;
+}
+.region-slider {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 15px;
+  min-width: 480px;
+  position: relative;
+  top: -10px;
+  z-index: 3;
+}
+.region-slider img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.view-content.slick-slider {
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.8);
+}
+.slick-arrow {
+  position: absolute;
+  width: 19px;
+  height: 138px;
+  top: 30%;
+  z-index: 10;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 0;
+}
+.slick-prev {
+  background: url(/sites/all/themes/base/styles/images/slider_prev.png) left no-repeat;
+  left: 30px;
+}
+.slick-prev:hover {
+  background: url(/sites/all/themes/base/styles/images/slider_prev.png) right no-repeat;
+}
+.slick-next {
+  background: url(/sites/all/themes/base/styles/images/slider_next.png) right no-repeat;
+  right: 30px;
+}
+.slick-next:hover {
+  background: url(/sites/all/themes/base/styles/images/slider_next.png) left no-repeat;
+}
+/*---------------------------правая колонка--------------------------------*/
+/*-------------------блок ближайших занятий-------------------------------*/
+#block-views-calendar-block-2 {
+  background: #d68e43;
+  border: 4px solid #a05d18;
+  border-radius: 10px;
+  padding: 10px;
+}
+/*------------------подвал------------------------------------------------*/
+footer {
+  padding-top: 17%;
+}
+/* Большой дисплей */
+@media (max-width: 1200px) {
+  .region-header {
+    height: 100px !important;
+  }
+  #block-block-1 {
+    margin-left: -110px;
+    width: 220px;
+    top: -74px;
+  }
+  #block-menu-menu-left,
+  #block-menu-menu-fight {
+    margin-top: 30px;
+    width: 39%;
+  }
+  #block-menu-menu-left .content a,
+  #block-menu-menu-fight .content a {
+    font-size: 16px;
+  }
+}
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (max-width: 979px) {
+  .region-header {
+    height: 160px !important;
+  }
+  #block-block-1 {
+    margin-left: -140px;
+    width: 280px;
+    top: -93px;
+  }
+  #block-menu-menu-left,
+  #block-menu-menu-fight {
+    margin-top: 0px;
+    width: 40%;
+  }
+  #block-menu-menu-left .content ul,
+  #block-menu-menu-fight .content ul {
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #block-menu-menu-left .content ul li,
+  #block-menu-menu-fight .content ul li {
+    text-align: center;
+  }
+  #block-menu-menu-left .content a,
+  #block-menu-menu-fight .content a {
+    font-size: 20px;
+  }
+}
+/* От ландшафтного экрана телефона до потретного планшета */
+@media (max-width: 767px) {
+  .region-header {
+    height: 100px !important;
+  }
+  #block-block-1 {
+    margin-left: 0px;
+    width: 220px;
+    top: -74px;
+  }
+  #block-menu-menu-left,
+  #block-menu-menu-fight {
+    display: none;
+  }
+  #block-system-main-menu .title {
+    display: block;
+  }
+}
+/* Landscape - телефоны */
+@media (max-width: 480px) {
+  #block-system-main-menu .title {
+    display: block;
+  }
+}
